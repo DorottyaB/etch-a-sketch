@@ -5,14 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Etch-a-Sketch</title>
 </head>
 
 <body>
-    <button>Clear</button>
+    <h1 class="title is-1 has-text-success mb-6">Etch-a-Sketch</h1>
+    <div class="columns is-flex is-justify-content-center mt-2">
+        <div class="column is-two-fifths is-flex is-flex-direction-column is-justify-content-center">
+            <div id="buttons-col">
+                <button class="button is-success is-outlined is-rounded mb-3" id="random-mode">Random Color</button>
+                <button class="button is-success is-outlined is-rounded mb-3" id="grayscale-mode">Grayscale</button>
+                <button class="button is-success is-outlined is-rounded mb-3" id="rainbow-mode">Rainbow</button>
+                <button class="button is-success is-outlined is-rounded mb-3" id="eraseBtn">Eraser</button>
+                <button class="button is-danger is-outlined is-rounded mb-3" id="clearBtn">Clear</button>
+                <p class="is-size-5 has-text-success has-text-centered mt-5" id="range-display">16 x 16</p>
+                <input type="range" value="16" id="range" min="1" max="100" aria-label="range" />
+            </div>
+        </div>
 
-    <div class="container"></div>
+        <div class="column">
+            <div class="grid"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
